@@ -27,42 +27,38 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-2739fc01ada8293a8868.js"
+    "url": "webpack-runtime-ba5c7a5e67005e25e17f.js"
   },
   {
-    "url": "framework-09fff95431f7148628e6.js"
+    "url": "framework-6c3ead24af170cdcb87c.js"
   },
   {
-    "url": "app-f2360b3a0dafffe7feb9.js"
+    "url": "app-37c4751215a318a1ce9d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e6abf11904baf387abb20c58b12ba9d5"
+    "revision": "4043c4a762b9ff6dd51e9dfc79e3f558"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-d3623cc07c95ebc5d3f9.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-260e89c911c4cfae04b1.js"
   },
   {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f2c002077289a7e1ac538802bc7f5314"
+    "url": "polyfill-30a761bdd526fe06de9d.js"
   },
   {
-    "url": "page-data/app-data.json",
-    "revision": "7d674bd8f8d356c1baaf35f3f3bbb700"
-  },
-  {
-    "url": "polyfill-47065e27b740696a19a1.js"
+    "url": "manifest.json",
+    "revision": "1f7f77fb16e57d44416243cecdd7cf26"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "d8d39052649bfe9892f67bb8030e5bfc"
+    "revision": "3fbbfc50f6d5b35e62a5702a3d0ac08c"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\/page-data\/.*\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|avif|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
 /* global importScripts, workbox, idbKeyval */
@@ -142,12 +138,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/my-portfolio`), ``)
+  pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/my-portfolio/app-f2360b3a0dafffe7feb9.js`))) {
+  if (!resources || !(await caches.match(`/app-37c4751215a318a1ce9d.js`))) {
     return await fetch(event.request)
   }
 
@@ -160,7 +156,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/my-portfolio/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
