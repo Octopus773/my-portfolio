@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://gatsby-starter-portfolio-minimal.netlify.app/sitemap.xml
-Host: https://gatsby-starter-portfolio-minimal.netlify.app
+Sitemap: https://clement-le-bihan.xyz/sitemap.xml
+Host: https://clement-le-bihan.xyz
