@@ -6,7 +6,7 @@ module.exports = {
   siteDescription: "Clément's portfolio",
   siteUrl: "https://www.clement-le-bihan.xyz/",
   siteLanguage: "en_US",
-  siteIcon: "content/favicon.png", // Relative to gatsby-config file
+  siteIcon: "content/favicon.jpg", // Relative to gatsby-config file
   seoTitleSuffix: "Clément LB", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
   useCookieBar: false, // If you use Google Analytics and want to be GDPR-compliant, set it to true
   googleAnalyticsTrackingId: "", // e.g. UA-XXXXXX-X
@@ -86,7 +86,7 @@ module.exports = {
         url: "/#about",
       },
       {
-        name: "Features",
+        name: "Projects",
         url: "/#projects",
       },
       {
