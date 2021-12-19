@@ -25,6 +25,7 @@ const IndexPage = ({ data }) => {
     darkMode: false,
   }
 
+  // <Articles />
   return (
     <GlobalStateProvider initialState={globalState}>
       <Layout>
@@ -37,7 +38,6 @@ const IndexPage = ({ data }) => {
         />
         <Hero content={data.hero.edges} />
         {/* Articles is populated via Medium RSS Feed fetch */}
-        <Articles />
         <About content={data.about.edges} />
         <Interests content={data.interests.edges} />
         <Projects content={data.projects.edges} />

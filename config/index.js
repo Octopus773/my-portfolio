@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "Clément's portfolio",
   siteShortTitle: "Artemis", // Used as logo text in header, footer, and splash screen
   siteDescription: "Clément's portfolio",
-  siteUrl: "https://clement-le-bihan.xyz/",
+  siteUrl: "https://www.clement-le-bihan.xyz/",
   siteLanguage: "en_US",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "Clément LB", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
@@ -50,7 +50,7 @@ module.exports = {
   //  "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40konstantinmuenster",
   mediumRssFeed:
     "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.theguardian.com%2Finternational%2Frss",
-  shownArticles: 10,
+  shownArticles: 0,
 
   //-- SOCIAL MEDIA SETTINGS -----
   // There are icons available for the following platforms:
