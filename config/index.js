@@ -95,10 +95,11 @@ module.exports = {
       },
     ],
     button: {
-      useFileName: true,
+      useFileName: false,
       name: "Resume",
-      fileName: "clement_lb_resume.pdf", // the file has to be placed inside the static folder at the root level
-      url: "", // if useFileName=false, you can set an anchor link here and use the button for navigational purposes
+      fileName: "clement_lb_resume_no.pdf", // the file has to be placed inside the static folder at the root level
+      url:
+        "https://drive.google.com/file/d/1TyV86nGHAtIIDvm_Peyj64HogUJn_IiI/view", // if useFileName=false, you can set an anchor link here and use the button for navigational purposes
     },
   },
   footerLinks: [
